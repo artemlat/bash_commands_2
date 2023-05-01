@@ -29,22 +29,22 @@ $ pwd
 /d/linux_terminal/dir_1
 ```
 
-### 5. Create empty file tf_1.txt in the dir_1 folder:
+### 5. Create empty file tf_1.txt in the inner_dir_1 folder not entering it:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ touch tf_1.txt
+$ touch inner_dir_1/tf_1.txt
 ```
 
-### 6. Create a file  tf_2.txt with lines  
+### 6. Create a file tf_2.txt with lines  
 - the first 1
 - the second 2
 - the third 3  
-using command `cat` in the folder dir_1:
+using command `cat` in the inner_dir_1 folder not entering it:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ cat > tf_2.txt
+$ cat > inner_dir_1/tf_2.txt
 - the first 1
 - the second 2
 - the third 3
@@ -59,7 +59,55 @@ artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
 $ cd inner_dir_1/
 ```
 
-### 8. 
+### 8. Create file tf_3.txt with any lines using `cat` command:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ cat > tf_3.txt
+11111
+22222
+33333
+44444
+55555
+```
+
+*Press `Ctrl+C`*
+
+### 9. Add to the file tf_3.txt a line “the second 2” using `cat` command:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ cat >> tf_3.txt
+the second 2
+```
+
+*Press `Ctrl+C`*
+
+### 10. Add to the file tf_3.txt a line “the sec 2” using `cat` command:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ cat >> tf_3.txt
+the sec 2
+```
+
+*Press `Ctrl+C`*
+
+### 11. Add to the file tf_2.txt a line “the sec 3” using `cat` command:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ cat >> tf_2.txt
+the sec 3
+```
+
+*Press `Ctrl+C`*
+
+### 12. 
+
+
+
+
 
 
 
