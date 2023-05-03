@@ -199,9 +199,83 @@ $ find . -name "*tf*"
 ./tf_2.txt
 ```
 
-### 22. 
+### 22. Find path to files that have “tf” in its name with insensitive case of letters:
 
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ find . -iname "*tf*"
+./inner_dir_1/tf_3.txt
+./inner_dir_1/tf_4.txt
+./inner_dir_1/tF_5.txt
+./tf_1.txt
+./tf_2.txt
+```
 
+### 23. Find lines with “sec” in the folder dir_1
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep 'sec' *
+grep: inner_dir_1: Is a directory
+tf_2.txt:- the second 2
+tf_2.txt:the sec 3
+```
+
+### 24. Find lines with “sec” with insensitive case of letters in the folder dir_1:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -i 'sec' *
+grep: inner_dir_1: Is a directory
+tf_2.txt:- the second 2
+tf_2.txt:the sec 3
+tf_2.txt:the seConD 2
+```
+
+### 25. Find lines with only “sec” combination in the folder dir_1:
+
+```artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -w 'sec' *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the sec 3
+```
+
+### 26. Find lines with only “sec” combination with insensitive case of letters in the folder dir_1:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -wi 'sec' *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the sec 3
+```
+
+### 27. Find lines with “second” in the folder dir_1
+
+```artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep 'second' *
+grep: inner_dir_1: Is a directory
+tf_2.txt:- the second 2
+```
+
+### 28. Find lines with “second” with insensitive case of letters in the folder dir_1:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -i 'second' *
+grep: inner_dir_1: Is a directory
+tf_2.txt:- the second 2
+tf_2.txt:the seConD 2
+```
+
+### 29. Find lines with “second” in the folders that are located in all directories level below:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -r 'second' inner_dir_1/
+inner_dir_1/tf_3.txt:the second 2
+```
+
+### 30. 
 
 
 
