@@ -103,7 +103,64 @@ the sec 3
 
 *Press `Ctrl+C`*
 
-### 12. 
+### 12. Add to the file tf_3.txt a line “the SeCoNd 2” using `cat` command:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ cat >> tf_3.txt
+the SeCoNd 2
+```
+
+*Press `Ctrl+C`*
+
+### 13. Add to the file tf_2.txt a line “the seConD 2” using `cat` command:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ cat >> tf_2.txt
+the seConD 2
+```
+*Press `Ctrl+C`*
+
+### 14. Create a file tf_4.txt with 15 lines inside:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ seq 15 | cat > tf_4.txt
+```
+
+### 15. Create a file tF_5.txt with 13 lines inside:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ seq 13 | cat > tF_5.txt
+```
+
+### 16. Show content list of the direction:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ ls -la
+total 4
+drwxr-xr-x 1 artem 197609  0 May  3 22:15 ./
+drwxr-xr-x 1 artem 197609  0 May  1 23:40 ../
+-rw-r--r-- 1 artem 197609 30 May  3 22:15 tF_5.txt
+-rw-r--r-- 1 artem 197609  0 May  1 23:42 tf_1.txt
+-rw-r--r-- 1 artem 197609 66 May  3 19:50 tf_2.txt
+-rw-r--r-- 1 artem 197609 66 May  3 19:48 tf_3.txt
+-rw-r--r-- 1 artem 197609 36 May  3 22:13 tf_4.txt
+```
+
+### 17. Exit the folder inner_dir_1:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
+$ cd ..
+```
+
+### 18. 
+
+
 
 
 
