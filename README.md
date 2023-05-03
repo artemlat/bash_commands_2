@@ -29,22 +29,22 @@ $ pwd
 /d/linux_terminal/dir_1
 ```
 
-### 5. Create empty file tf_1.txt in the inner_dir_1 folder not entering it:
+### 5. Create empty file tf_1.txt:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ touch inner_dir_1/tf_1.txt
+$ touch tf_1.txt
 ```
 
 ### 6. Create a file tf_2.txt with lines  
 - the first 1
 - the second 2
 - the third 3  
-using command `cat` in the inner_dir_1 folder not entering it:
+using command `cat`:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ cat > inner_dir_1/tf_2.txt
+$ cat > tf_2.txt
 - the first 1
 - the second 2
 - the third 3
@@ -97,7 +97,7 @@ the sec 2
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
-$ cat >> tf_2.txt
+$ cat >> ../tf_2.txt
 the sec 3
 ```
 
@@ -117,7 +117,7 @@ the SeCoNd 2
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
-$ cat >> tf_2.txt
+$ cat >> ../tf_2.txt
 the seConD 2
 ```
 *Press `Ctrl+C`*
@@ -141,14 +141,12 @@ $ seq 13 | cat > tF_5.txt
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
 $ ls -la
-total 4
-drwxr-xr-x 1 artem 197609  0 May  3 22:15 ./
-drwxr-xr-x 1 artem 197609  0 May  1 23:40 ../
+total 2
+drwxr-xr-x 1 artem 197609  0 May  3 23:07 ./
+drwxr-xr-x 1 artem 197609  0 May  3 23:06 ../
 -rw-r--r-- 1 artem 197609 30 May  3 22:15 tF_5.txt
--rw-r--r-- 1 artem 197609  0 May  1 23:42 tf_1.txt
--rw-r--r-- 1 artem 197609 66 May  3 19:50 tf_2.txt
 -rw-r--r-- 1 artem 197609 66 May  3 19:48 tf_3.txt
--rw-r--r-- 1 artem 197609 36 May  3 22:13 tf_4.txt
+-rw-r--r-- 1 artem 197609  0 May  3 22:51 tf_4.txt
 ```
 
 ### 17. Exit the folder inner_dir_1:
@@ -158,7 +156,51 @@ artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1/inner_dir_1
 $ cd ..
 ```
 
-### 18. 
+### 18. Show content of the file tf_3.txt
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ cat inner_dir_1/tf_3.txt
+11111
+22222
+33333
+44444
+55555
+the second 2
+the sec 2
+the SeCoNd 2
+```
+
+### 19. Find path to tf_4.txt
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ find -name tf_4.txt
+./inner_dir_1/tf_4.txt
+```
+
+### 20. Clear content of the file tf_4.txt without deletting of the file:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ cat > inner_dir_1/tf_4.txt
+```
+
+*Press `Ctrl+C`*
+
+### 21. Find path to files that have “tf” in its name:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ find . -name "*tf*"
+./inner_dir_1/tf_3.txt
+./inner_dir_1/tf_4.txt
+./tf_1.txt
+./tf_2.txt
+```
+
+### 22. 
+
 
 
 
