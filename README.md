@@ -275,15 +275,16 @@ $ grep -r 'second' inner_dir_1/
 inner_dir_1/tf_3.txt:the second 2
 ```
 
-### 30. Find path and name of the file which lines contain “second” in the folder dir_1:
+### 30. Find path and name of the files which lines contain “second” in the folder dir_1:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ grep -s 'second' ./*
-./tf_2.txt:- the second 2
+$ grep -sl 'second' ./*
+./tf_2.txt
 ```
 
 *Parameter `-s` ignores error messeges*
+*Parameter `-l` shows only name and path of the file that contains "pattern"*
 
 ### 31. Find all lines in all files that don't contain “second”:
 
@@ -318,6 +319,16 @@ tf_2.txt:the seConD 2
 
 *Parameter `-v` ignores all lines with "pattern"*
 
+### 32. Find path and name of the files which lines don't contain “second” in all directories:
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -sLr 'second' *
+inner_dir_1/tf_4.txt
+inner_dir_1/tF_5.txt
+tf_1.txt
+```
+
+### 33. 
 
 
 
