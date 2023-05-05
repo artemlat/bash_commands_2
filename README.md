@@ -357,7 +357,7 @@ artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
 $ mkdir dir; echo '1 2 3 4 5' > FILE.txt
 ```
 
-### 36. Replace all files which contains "sec" to any directory:
+### 36. One line command. Replace all files which contains "sec" to any directory:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
@@ -370,7 +370,50 @@ tf_2.txt  tf_3.txt
 
 *Parametr `-t` replaces all chosen files to chosen catalogue*
 
-### 37. 
+### 37. One line command. Copy all files which contains "sec" to any directory:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ mkdir dir_2; grep -rls 'sec' * | xargs cp -t dir_2
+
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ ls dir_2
+tf_2.txt  tf_3.txt
+```
+
+### 38. One line command. Find all lines which conrains “sec” in all files and copy them to the new created file:  
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -r 'sec' > created.txt
+grep: input file ‘created.txt’ is also the output
+
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ cat created.txt
+dir/tf_2.txt:- the second 2
+dir/tf_2.txt:the sec 3
+dir/tf_3.txt:the second 2
+dir/tf_3.txt:the sec 2
+dir_2/tf_2.txt:- the second 2
+dir_2/tf_2.txt:the sec 3
+dir_2/tf_3.txt:the second 2
+dir_2/tf_3.txt:the sec 2
+```
+
+### 39. One line command. Delete all files which lines contains 'sec':
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -rl 'sec' * | xargs rm
+```
+
+### 40. Show in terminal a messege “Good job!!”:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ echo 'Good job!!'
+Good job!!
+```
 
 
 
