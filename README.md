@@ -328,7 +328,36 @@ inner_dir_1/tF_5.txt
 tf_1.txt
 ```
 
-### 33. 
+### 33. Show last 4 lines of any text file:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ tail -4 inner_dir_1/tf_3.txt
+55555
+the second 2
+the sec 2
+the SeCoNd 2
+```
+
+### 34. Show first 4 lines of any text file:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ head -4 inner_dir_1/tf_3.txt
+11111
+22222
+33333
+44444
+```
+
+### 35. One line command. Create a folder and create a file with any content.
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ mkdir dir; echo '1 2 3 4 5' > FILE.txt
+```
+
+### 36. 
 
 
 
