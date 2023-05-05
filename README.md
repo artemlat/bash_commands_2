@@ -357,7 +357,20 @@ artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
 $ mkdir dir; echo '1 2 3 4 5' > FILE.txt
 ```
 
-### 36. 
+### 36. Replace all files which contains "sec" to any directory:
+
+```
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ grep -rls 'sec' * | xargs mv -t dir
+
+artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
+$ ls dir
+tf_2.txt  tf_3.txt
+```
+
+*Parametr `-t` replaces all chosen files to chosen catalogue*
+
+### 37. 
 
 
 
