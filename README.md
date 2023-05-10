@@ -357,7 +357,7 @@ artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
 $ mkdir dir; echo '1 2 3 4 5' > FILE.txt
 ```
 
-### 36. One line command. Replace all files which contains "sec" to any directory:
+### 36. One line command. Replace all files which contains the word "sec" to any directory:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
@@ -382,14 +382,14 @@ the SeCoNd 2
 
 *Parametr `-t` replaces all chosen files to chosen catalogue*
 
-### 37. One line command. Copy all files which contains "sec" to any directory:
+### 37. One line command. Copy all files which contains the word "sec" to any directory:
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ mkdir dir_2; grep -rls 'sec' * | xargs cp -t dir_2
+$ mkdir new_folder; grep -rwl 'sec' | xargs cp -t new_folder
 
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ ls dir_2
+$ ls new_folder/
 tf_2.txt  tf_3.txt
 ```
 
