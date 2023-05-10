@@ -361,11 +361,23 @@ $ mkdir dir; echo '1 2 3 4 5' > FILE.txt
 
 ```
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ grep -rls 'sec' * | xargs mv -t dir
+$ grep -rwl 'sec' | xargs mv -t dir
 
 artem@DESKTOP-4FHC137 MINGW64 /d/linux_terminal/dir_1
-$ ls dir
-tf_2.txt  tf_3.txt
+$ cat dir/{tf_2.txt,tf_3.txt}
+- the first 1
+- the second 2
+- the third 3
+the sec 3
+the seConD 2
+11111
+22222
+33333
+44444
+55555
+the second 2
+the sec 2
+the SeCoNd 2
 ```
 
 *Parametr `-t` replaces all chosen files to chosen catalogue*
